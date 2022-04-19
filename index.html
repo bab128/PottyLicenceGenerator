@@ -143,6 +143,9 @@
                 const screenshotTarget = document.getElementById('licenceiframe').contentWindow.document.body;
                 html2canvas(screenshotTarget).then((canvas) => {
                     const base64image = canvas.toDataURL("image/png");
+                });
+                html2canvas(screenshotTarget).then((canvas) => {
+                    const base64image = canvas.toDataURL("image/png");
                     const link = document.createElement('a');
                     link.download = 'download.png';
                     link.href = base64image;
